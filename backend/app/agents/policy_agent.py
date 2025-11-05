@@ -3,8 +3,8 @@ Policy & Compliance Agent - Pure CAG Strategy
 Uses only static context from pre-loaded policy documents (no vector retrieval)
 """
 import os
-from langchain.chat_models import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferMemory
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")

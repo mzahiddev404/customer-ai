@@ -3,10 +3,9 @@ Technical Support Agent - Pure RAG Strategy
 Uses only retrieval-augmented generation from dynamic knowledge base
 """
 import os
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.chains import ConversationalRetrievalChain
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.memory import ConversationBufferMemory
 
 CHROMA_PATH = os.getenv("CHROMA_PERSIST_DIR", "./chroma_db")

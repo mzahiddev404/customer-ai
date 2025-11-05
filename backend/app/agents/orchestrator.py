@@ -4,9 +4,9 @@ Routes queries to appropriate specialized worker agents
 """
 import os
 from typing import Literal, TypedDict
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_aws import ChatBedrock
-from langchain.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
